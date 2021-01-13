@@ -39,7 +39,7 @@ CREATE TABLE public.session
         REFERENCES public.users (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
-)
+);
 
 ALTER TABLE public.session
     OWNER to postgres;
@@ -51,7 +51,7 @@ CREATE TABLE public.users
     password text COLLATE pg_catalog."default" NOT NULL,
     role text COLLATE pg_catalog."default",
     CONSTRAINT users_pkey PRIMARY KEY (id)
-)
+);
 
 ALTER TABLE public.users
     OWNER to postgres;
