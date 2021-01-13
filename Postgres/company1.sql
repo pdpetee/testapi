@@ -82,7 +82,7 @@ CREATE POLICY manager_rls_policy
     AS PERMISSIVE
     FOR ALL
     TO manager1
-    USING (true)
+    USING (true);
 
 CREATE SCHEMA department2
     AUTHORIZATION postgres;
