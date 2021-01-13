@@ -1,4 +1,6 @@
-CREATE DATABASE company2
+CREATE DATABASE company2;
+
+CREATE SCHEMA department3;
 
 GRANT CONNECT ON DATABASE company2 TO manager3;
 
