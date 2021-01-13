@@ -92,6 +92,13 @@ GRANT USAGE ON SCHEMA department2 TO director1;
 GRANT USAGE ON SCHEMA department2 TO manager2;
 
 GRANT ALL ON SCHEMA department2 TO postgres;
+                                  
+CREATE SEQUENCE department2.employee_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
 
 CREATE TABLE department2.employee
 (
@@ -99,7 +106,7 @@ CREATE TABLE department2.employee
     name text COLLATE pg_catalog."default" NOT NULL,
     salary real NOT NULL,
     CONSTRAINT employee_pkey PRIMARY KEY (id)
-)
+);
 
 ALTER TABLE department2.employee
     OWNER to postgres;
